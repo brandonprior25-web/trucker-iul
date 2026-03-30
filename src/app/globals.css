@@ -309,30 +309,40 @@
 
 /* Scroll reveal animation */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal.animate {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.visible {
+.reveal.animate.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Stagger children */
 .reveal-group > * {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-group.animate > * {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal-group.visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.reveal-group.visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
-.reveal-group.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.reveal-group.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.reveal-group.visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
-.reveal-group.visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
-.reveal-group.visible > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+.reveal-group.animate.visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.reveal-group.animate.visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.reveal-group.animate.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.reveal-group.animate.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.reveal-group.animate.visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.reveal-group.animate.visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.reveal-group.animate.visible > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
 
 /* Form select arrow */
 select.form-input {

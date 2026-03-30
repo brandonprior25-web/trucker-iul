@@ -7,9 +7,12 @@ export default function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const init = () => {
-      // Reset visibility on page change
-      document.querySelectorAll('.reveal, .reveal-group').forEach((el) => {
+    const timer = setTimeout(() => {
+      const elements = document.querySelectorAll('.reveal, .reveal-group');
+
+      // Add animate class so CSS kicks in, then observe
+      elements.forEach((el) => {
+        el.classList.add('animate');
         el.classList.remove('visible');
       });
 
@@ -22,21 +25,13 @@ export default function ScrollReveal() {
             }
           });
         },
-        { threshold: 0.05, rootMargin: '0px 0px -10px 0px' }
+        { threshold: 0, rootMargin: '0px' }
       );
 
-      document.querySelectorAll('.reveal, .reveal-group').forEach((el) => {
-        observer.observe(el);
-      });
+      elements.forEach((el) => observer.observe(el));
 
-      return observer;
-    };
-
-    // Delay to ensure DOM is fully painted
-    const timer = setTimeout(() => {
-      const observer = init();
       return () => observer.disconnect();
-    }, 100);
+    }, 50);
 
     return () => clearTimeout(timer);
   }, [pathname]);
