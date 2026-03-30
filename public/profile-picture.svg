@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0d2545"/>
+
+  <!-- Subtle diagonal pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#grid)"/>
+
+  <!-- Gold top bar accent -->
+  <rect x="0" y="0" width="400" height="5" fill="#c8960c"/>
+
+  <!-- Shield shape -->
+  <path d="M200 70 L280 105 L280 195 Q280 255 200 295 Q120 255 120 195 L120 105 Z"
+        fill="none" stroke="#c8960c" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Road lines inside shield (representing trucking) -->
+  <line x1="200" y1="130" x2="200" y2="260" stroke="#c8960c" stroke-width="2" stroke-dasharray="8,6" opacity="0.5"/>
+
+  <!-- Truck icon (simple silhouette) -->
+  <g transform="translate(145, 155)">
+    <!-- Truck body -->
+    <rect x="30" y="15" width="55" height="32" rx="2" fill="#c8960c" opacity="0.9"/>
+    <!-- Cab -->
+    <rect x="0" y="22" width="34" height="25" rx="2" fill="#c8960c" opacity="0.9"/>
+    <!-- Windshield -->
+    <rect x="4" y="25" width="22" height="14" rx="1" fill="#0d2545" opacity="0.7"/>
+    <!-- Wheels -->
+    <circle cx="18" cy="49" r="8" fill="#0d2545" stroke="#c8960c" stroke-width="2"/>
+    <circle cx="65" cy="49" r="8" fill="#0d2545" stroke="#c8960c" stroke-width="2"/>
+    <circle cx="90" cy="49" r="8" fill="#0d2545" stroke="#c8960c" stroke-width="2"/>
+  </g>
+
+  <!-- FFL text -->
+  <text x="200" y="308"
+        font-family="Georgia, serif"
+        font-size="28"
+        font-weight="600"
+        fill="#c8960c"
+        text-anchor="middle"
+        letter-spacing="6">
+    FAMILY FIRST LIFE
+  </text>
+
+  <!-- Tagline -->
+  <text x="200" y="335"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        font-weight="400"
+        fill="rgba(255,255,255,0.5)"
+        text-anchor="middle"
+        letter-spacing="3">
+    TRUCKER IUL
+  </text>
+
+  <!-- Gold bottom bar accent -->
+  <rect x="0" y="395" width="400" height="5" fill="#c8960c"/>
+</svg>
