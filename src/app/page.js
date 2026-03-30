@@ -166,7 +166,7 @@ export default function HomePage() {
     if (!quickForm.name || !quickForm.email) return;
     setQuickStatus('loading');
     try {
-      const res = await fetch('/api/quote', {
+      const res = await fetch('/api/quick-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...quickForm, source: 'homepage-quick-form' }),

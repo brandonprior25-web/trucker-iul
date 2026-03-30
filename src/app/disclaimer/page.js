@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
     fontFamily: '"Cormorant Garamond", Georgia, serif',
     fontWeight: 600,
     fontSize: '1.6rem',
-    color: '#0f0e0c',
+    color: '#0d2545',
     margin: '0 0 1rem 0',
     lineHeight: 1.2,
   };
@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
     fontFamily: 'Epilogue, sans-serif',
     fontWeight: 300,
     fontSize: '1rem',
-    color: '#6a6560',
+    color: '#3a5270',
     lineHeight: 1.8,
     margin: '0 0 1rem 0',
   };
@@ -32,7 +32,7 @@ export default function DisclaimerPage() {
       {/* ─── HERO ─── */}
       <section
         style={{
-          backgroundColor: '#0f0e0c',
+          backgroundColor: '#0d2545',
           paddingTop: 'clamp(7rem, 12vw, 10rem)',
           paddingBottom: 'clamp(4rem, 7vw, 6rem)',
           paddingLeft: '2rem',
@@ -98,7 +98,7 @@ export default function DisclaimerPage() {
           <div
             style={{
               backgroundColor: '#f0ede8',
-              borderLeft: '2px solid #0f0e0c',
+              borderLeft: '2px solid #0d2545',
               padding: '1.5rem 2rem',
               marginBottom: '4rem',
             }}
@@ -110,7 +110,7 @@ export default function DisclaimerPage() {
                 fontSize: '0.75rem',
                 textTransform: 'uppercase',
                 letterSpacing: '0.18em',
-                color: '#0f0e0c',
+                color: '#0d2545',
                 marginBottom: '0.5rem',
               }}
             >
@@ -121,7 +121,7 @@ export default function DisclaimerPage() {
                 fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 300,
                 fontSize: '0.92rem',
-                color: '#6a6560',
+                color: '#3a5270',
                 lineHeight: 1.8,
                 margin: 0,
               }}
@@ -139,7 +139,7 @@ export default function DisclaimerPage() {
             <div style={{ borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: '2.5rem' }}>
               <h2 style={sectionHeadStyle}>1. General Information Only</h2>
               <p style={bodyStyle}>
-                The information provided on this website — familyfirstlifenetwork.com — is for
+                The information provided on this website — truckeriul.com — is for
                 general informational and educational purposes only. It is not intended to
                 constitute, and should not be construed as, professional financial advice, tax
                 advice, legal advice, investment advice, or any other type of professional advice.
@@ -284,7 +284,7 @@ export default function DisclaimerPage() {
                         fontFamily: 'Epilogue, sans-serif',
                         fontWeight: 700,
                         fontSize: '0.82rem',
-                        color: '#0f0e0c',
+                        color: '#0d2545',
                         margin: '0 0 0.35rem 0',
                       }}
                     >
@@ -295,7 +295,7 @@ export default function DisclaimerPage() {
                         fontFamily: 'Epilogue, sans-serif',
                         fontWeight: 300,
                         fontSize: '0.9rem',
-                        color: '#6a6560',
+                        color: '#3a5270',
                         lineHeight: 1.8,
                         margin: 0,
                       }}
@@ -365,7 +365,7 @@ export default function DisclaimerPage() {
               </p>
               <div
                 style={{
-                  backgroundColor: '#0f0e0c',
+                  backgroundColor: '#0d2545',
                   padding: '2rem',
                   marginTop: '1.25rem',
                 }}

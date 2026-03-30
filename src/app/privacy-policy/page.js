@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
     fontFamily: '"Cormorant Garamond", Georgia, serif',
     fontWeight: 600,
     fontSize: '1.6rem',
-    color: '#0f0e0c',
+    color: '#0d2545',
     margin: '0 0 1rem 0',
     lineHeight: 1.2,
   };
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
     fontFamily: 'Epilogue, sans-serif',
     fontWeight: 300,
     fontSize: '1rem',
-    color: '#6a6560',
+    color: '#3a5270',
     lineHeight: 1.8,
     margin: '0 0 1rem 0',
   };
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
     fontFamily: 'Epilogue, sans-serif',
     fontWeight: 700,
     fontSize: '0.88rem',
-    color: '#2a2520',
+    color: '#0d2545',
     margin: '1.25rem 0 0.5rem 0',
     textTransform: 'uppercase',
     letterSpacing: '0.08em',
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
       {/* ─── HERO ─── */}
       <section
         style={{
-          backgroundColor: '#0f0e0c',
+          backgroundColor: '#0d2545',
           paddingTop: 'clamp(7rem, 12vw, 10rem)',
           paddingBottom: 'clamp(4rem, 7vw, 6rem)',
           paddingLeft: '2rem',
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
           <div
             style={{
               backgroundColor: '#f0ede8',
-              borderLeft: '2px solid #0f0e0c',
+              borderLeft: '2px solid #0d2545',
               padding: '1.5rem 2rem',
               marginBottom: '4rem',
             }}
@@ -125,7 +125,7 @@ export default function PrivacyPolicyPage() {
                 fontSize: '0.75rem',
                 textTransform: 'uppercase',
                 letterSpacing: '0.18em',
-                color: '#0f0e0c',
+                color: '#0d2545',
                 marginBottom: '0.5rem',
               }}
             >
@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
                 fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 300,
                 fontSize: '0.92rem',
-                color: '#6a6560',
+                color: '#3a5270',
                 lineHeight: 1.8,
                 margin: 0,
               }}
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
                 If you have questions about this Privacy Policy or our data practices, please contact us at{' '}
                 <a
                   href="mailto:brandonaioinsurance@gmail.com"
-                  style={{ color: '#0f0e0c', fontWeight: 700, textDecoration: 'underline' }}
+                  style={{ color: '#0d2545', fontWeight: 700, textDecoration: 'underline' }}
                 >
                   brandonaioinsurance@gmail.com
                 </a>
@@ -204,7 +204,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
@@ -254,7 +254,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -264,7 +264,7 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
@@ -327,7 +327,7 @@ export default function PrivacyPolicyPage() {
                         fontFamily: 'Epilogue, sans-serif',
                         fontWeight: 700,
                         fontSize: '0.82rem',
-                        color: '#0f0e0c',
+                        color: '#0d2545',
                         margin: '0 0 0.35rem 0',
                       }}
                     >
@@ -338,7 +338,7 @@ export default function PrivacyPolicyPage() {
                         fontFamily: 'Epilogue, sans-serif',
                         fontWeight: 300,
                         fontSize: '0.9rem',
-                        color: '#6a6560',
+                        color: '#3a5270',
                         lineHeight: 1.8,
                         margin: 0,
                       }}
@@ -358,7 +358,7 @@ export default function PrivacyPolicyPage() {
                   fontFamily: 'Epilogue, sans-serif',
                   fontWeight: 700,
                   fontSize: '1rem',
-                  color: '#0f0e0c',
+                  color: '#0d2545',
                   lineHeight: 1.8,
                   margin: '0 0 1rem 0',
                 }}
@@ -407,7 +407,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -418,13 +418,13 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
                       —
                     </span>
-                    <strong style={{ color: '#2a2520', fontWeight: 700 }}>{item.head}:</strong>{' '}
+                    <strong style={{ color: '#0d2545', fontWeight: 700 }}>{item.head}:</strong>{' '}
                     {item.body}
                   </li>
                 ))}
@@ -442,7 +442,7 @@ export default function PrivacyPolicyPage() {
                 any time by emailing us at{' '}
                 <a
                   href="mailto:brandonaioinsurance@gmail.com"
-                  style={{ color: '#0f0e0c', fontWeight: 700, textDecoration: 'underline' }}
+                  style={{ color: '#0d2545', fontWeight: 700, textDecoration: 'underline' }}
                 >
                   brandonaioinsurance@gmail.com
                 </a>
@@ -501,7 +501,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -512,13 +512,13 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
                       —
                     </span>
-                    <strong style={{ color: '#2a2520', fontWeight: 700 }}>{item.head}:</strong>{' '}
+                    <strong style={{ color: '#0d2545', fontWeight: 700 }}>{item.head}:</strong>{' '}
                     {item.body}
                   </li>
                 ))}
@@ -559,7 +559,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -569,13 +569,13 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
                       —
                     </span>
-                    <strong style={{ color: '#2a2520', fontWeight: 700 }}>{item.head}:</strong>{' '}
+                    <strong style={{ color: '#0d2545', fontWeight: 700 }}>{item.head}:</strong>{' '}
                     {item.body}
                   </li>
                 ))}
@@ -584,7 +584,7 @@ export default function PrivacyPolicyPage() {
                 To exercise any of these rights, please contact us at{' '}
                 <a
                   href="mailto:brandonaioinsurance@gmail.com"
-                  style={{ color: '#0f0e0c', fontWeight: 700, textDecoration: 'underline' }}
+                  style={{ color: '#0d2545', fontWeight: 700, textDecoration: 'underline' }}
                 >
                   brandonaioinsurance@gmail.com
                 </a>
@@ -620,7 +620,7 @@ export default function PrivacyPolicyPage() {
                       fontFamily: 'Epilogue, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.95rem',
-                      color: '#6a6560',
+                      color: '#3a5270',
                       lineHeight: 1.7,
                       paddingLeft: '1.25rem',
                       position: 'relative',
@@ -630,7 +630,7 @@ export default function PrivacyPolicyPage() {
                       style={{
                         position: 'absolute',
                         left: 0,
-                        color: '#9a9590',
+                        color: '#6a7f96',
                         fontFamily: '"Cormorant Garamond", Georgia, serif',
                       }}
                     >
@@ -644,7 +644,7 @@ export default function PrivacyPolicyPage() {
                 To submit a CCPA request, email us at{' '}
                 <a
                   href="mailto:brandonaioinsurance@gmail.com"
-                  style={{ color: '#0f0e0c', fontWeight: 700, textDecoration: 'underline' }}
+                  style={{ color: '#0d2545', fontWeight: 700, textDecoration: 'underline' }}
                 >
                   brandonaioinsurance@gmail.com
                 </a>{' '}
@@ -693,7 +693,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div
                 style={{
-                  backgroundColor: '#0f0e0c',
+                  backgroundColor: '#0d2545',
                   padding: '2rem',
                   marginTop: '1.25rem',
                 }}
