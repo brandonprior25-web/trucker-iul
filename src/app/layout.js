@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />

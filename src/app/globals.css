@@ -58,7 +58,13 @@
   }
 
   a {
+    color: inherit;
+    text-decoration: none;
     transition: color 0.2s ease;
+  }
+
+  a:visited {
+    color: inherit;
   }
 
   input, textarea, select {

@@ -7,33 +7,38 @@ export default function ScrollReveal() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Reset all reveal elements so they animate in fresh on each page
-    document.querySelectorAll('.reveal, .reveal-group').forEach((el) => {
-      el.classList.remove('visible');
-    });
+    const init = () => {
+      // Reset visibility on page change
+      document.querySelectorAll('.reveal, .reveal-group').forEach((el) => {
+        el.classList.remove('visible');
+      });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.05, rootMargin: '0px 0px -10px 0px' }
+      );
 
-    // Small delay so the new page's DOM is ready
-    const timer = setTimeout(() => {
       document.querySelectorAll('.reveal, .reveal-group').forEach((el) => {
         observer.observe(el);
       });
-    }, 50);
 
-    return () => {
-      clearTimeout(timer);
-      observer.disconnect();
+      return observer;
     };
+
+    // Delay to ensure DOM is fully painted
+    const timer = setTimeout(() => {
+      const observer = init();
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;
