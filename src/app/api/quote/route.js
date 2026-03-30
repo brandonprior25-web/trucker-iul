@@ -8,13 +8,18 @@ function getTransporter() {
     throw new Error('Missing required SMTP environment variables.');
   }
 
+  const port = parseInt(SMTP_PORT || '587', 10);
   return nodemailer.createTransport({
     host: SMTP_HOST,
-    port: parseInt(SMTP_PORT || '587', 10),
-    secure: parseInt(SMTP_PORT || '587', 10) === 465,
+    port,
+    secure: port === 465,
+    requireTLS: port === 587,
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 }

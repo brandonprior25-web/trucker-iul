@@ -8,11 +8,14 @@ function sanitize(value) {
 function getTransporter() {
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) throw new Error('Missing SMTP config');
+  const port = parseInt(SMTP_PORT || '587', 10);
   return nodemailer.createTransport({
     host: SMTP_HOST,
-    port: parseInt(SMTP_PORT || '587', 10),
-    secure: parseInt(SMTP_PORT || '587', 10) === 465,
+    port,
+    secure: port === 465,
+    requireTLS: port === 587,
     auth: { user: SMTP_USER, pass: SMTP_PASS },
+    tls: { rejectUnauthorized: false },
   });
 }
 
