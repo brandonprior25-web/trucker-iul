@@ -101,6 +101,13 @@ export default function QuotePage() {
   const [status, setStatus] = useState('idle'); // idle | loading | error
   const [serverMessage, setServerMessage] = useState('');
 
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length <= 3) return digits.length ? `(${digits}` : '';
+    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  };
+
   const validate = () => {
     const newErrors = { ...initialErrors };
     let valid = true;
@@ -112,8 +119,10 @@ export default function QuotePage() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       newErrors.email = 'Please enter a valid email address.'; valid = false;
     }
-    if (form.phone && !/^[\d\s\-().+]{7,15}$/.test(form.phone)) {
-      newErrors.phone = 'Please enter a valid phone number.'; valid = false;
+    if (!form.phone.trim()) {
+      newErrors.phone = 'Phone number is required.'; valid = false;
+    } else if (form.phone.replace(/\D/g, '').length < 10) {
+      newErrors.phone = 'Please enter a valid 10-digit phone number.'; valid = false;
     }
     if (!form.ageRange) { newErrors.ageRange = 'Please select your age range.'; valid = false; }
     if (!form.state) { newErrors.state = 'Please select your state.'; valid = false; }
@@ -127,7 +136,8 @@ export default function QuotePage() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value;
+    let newValue = type === 'checkbox' ? checked : value;
+    if (name === 'phone') newValue = formatPhone(value);
     setForm((prev) => ({ ...prev, [name]: newValue }));
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
@@ -336,10 +346,7 @@ export default function QuotePage() {
 
                 <div data-error={!!errors.phone}>
                   <label htmlFor="phone" style={labelStyle}>
-                    Phone{' '}
-                    <span style={{ color: '#c0c0c0', fontWeight: 300, textTransform: 'none', letterSpacing: 0 }}>
-                      (optional)
-                    </span>
+                    Phone Number <span style={{ color: '#c0392b' }}>*</span>
                   </label>
                   <input
                     id="phone"

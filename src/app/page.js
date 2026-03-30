@@ -156,9 +156,16 @@ export default function HomePage() {
   const [quickForm, setQuickForm] = useState(initialQuickForm);
   const [quickStatus, setQuickStatus] = useState('idle');
 
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length <= 3) return digits.length ? `(${digits}` : '';
+    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  };
+
   const handleQuickChange = (e) => {
     const { name, value } = e.target;
-    setQuickForm((prev) => ({ ...prev, [name]: value }));
+    setQuickForm((prev) => ({ ...prev, [name]: name === 'phone' ? formatPhone(value) : value }));
   };
 
   const handleQuickSubmit = async (e) => {
